@@ -2,8 +2,14 @@
 
 An ANSI image generator, to start it run:
 `python generator.py`
-Then enter an image path and additional arguments.(--resize resizes the image to 300x300, --reduce reduces the quality)
 
-The generator doesn't support custom resizing or reducing values, I'm probably going to add them in the future.
+Arguments are
+`<path> [--resize int int] [--reduce int] [--pickle]`
+`<path>` is a string, the path to the image file.
+`--resize` is a tuple of integers, when passed, it resizes the image to the width and height passed.
+`--reduce` reduces the quality of the image by the factor provided.
+`--pickle` stores the ANSI string of the image in a pickle file in the current directory.
 
-You can add them yourself if you want.
+For example.
+
+`$ /User/Images/rickroll.png --reduce 3 --pickle`
